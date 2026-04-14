@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --accent: #7c6ff7;
+    --text-primary: #2d3436;
+    --text-muted: #636e72;
+    --priority-high: #ef4444;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+}
+
+.todo-card {
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.todo-card header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.todo-card header>div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.todo-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.todo-card.is-done .todo-title {
+    text-decoration: line-through;
+    color: var(--text-muted);
+}
+
+.todo-description {
+    color: var(--text-muted);
+}
+
+.priority-badge {
+    align-self: flex-start;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.priority-badge.high {
+    background: var(--priority-high);
+    color: white;
+}
+
+.todo-tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+}
+
+.todo-tags li {
+    background: var(--accent);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.action-buttons button {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.action-buttons button:focus {
+    outline: 2px solid var(--accent);
+}
+
+.todo-complete {
+    margin-right: 0.5rem;
+}
+
+.todo-card {
+    padding: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .todo-card {
+        padding: 2rem;
+    }
+
+    .todo-title {
+        font-size: 1.25rem;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
