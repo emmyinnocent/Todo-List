@@ -14,7 +14,7 @@ The component is intentionally minimal in stack plain HTML, CSS, and vanilla Jav
 
 ## Features
 
-- **Semantic HTML** — built with `<article>`, `<time>`, `<ul>`, `<input>`, and `<button>` no div soup
+- **Semantic HTML** built with `<article>`, `<time>`, `<ul>`, `<input>`, and `<button>` no div soup
 - **Live time remaining** friendly human-readable countdown ("Due in 3 days", "Due tomorrow", "Overdue by 2 hours") that refreshes every 60 seconds via `setInterval`
 - **Priority badge** displays Low, Medium, or High with distinct visual treatment
 - **Status indicator** Pending / In Progress / Done, updates to "Done" on checkbox toggle
